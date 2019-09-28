@@ -1,4 +1,10 @@
 // Mixins Here
+.phone-width-100() {
+    @media @phone {
+        width: 100%;
+    }
+}
+
 .flexbox(@direction, @justfify, @align-items, @align-content) {
     display: flex;
     flex-direction: @direction;
@@ -6,7 +12,7 @@
     align-items: @align-items;
     align-content: @align-content;
 }
-.button(@bg-color, @font-color, @width) {
+.button(@bg-color, @font-color, @width, @phone-width) {
     background: @bg-color;
     color: @font-color;
     width: @width;
@@ -15,10 +21,10 @@
     border-radius: 0.5rem;
     .flexbox(row, center, center, center);
     @media @phone {
-        width: 100%;
+        width: @phone-width;
         height: 7rem;
     }
-    
+
     @keyframes button-animation {
         from {background-color: @bg-color; color: @font-color;}
         to {background: @font-color; color: @bg-color; border: 1px solid @bg-color;}

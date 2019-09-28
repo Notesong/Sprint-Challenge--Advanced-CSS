@@ -2,11 +2,10 @@
 
 .home {
 
-
-
   .intro {
     img {
       width: 100%;
+      border-radius: 0.5rem;
     }
     h2 {
       padding: 15px;
@@ -30,9 +29,7 @@
       height: 100%;
     }
     .blast {
-      @media @phone {
-        width: 100%;
-      }
+      .phone-width-100();
     }
     .sky, .launch {
       @media @phone {
@@ -67,9 +64,7 @@
 
     .walk-text {
       width: 50%;
-      @media @phone {
-        width: 100%;
-      }
+      .phone-width-100();
 
       h3 {
         margin-bottom: 10px;
@@ -83,16 +78,16 @@
       }
 
       .btn {
-        .button(@button-background, @wild-sand, 11rem);
+        .button(@button-background, @wild-sand, 11rem, 100%);
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      .phone-width-100();
       @media @phone {
-        width: 100%;
-        margin: 2rem 0;
+        margin: 2rem;
       }
       
       img {
