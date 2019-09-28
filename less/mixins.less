@@ -1,8 +1,26 @@
 // Mixins Here
-.flexbox(@direction, @justfify, @alignItems, @alignContent) {
+.flexbox(@direction, @justfify, @align-items, @align-content) {
     display: flex;
     flex-direction: @direction;
     justify-content: @justfify;
-    align-items: @alignItems;
-    align-content: @alignContent;
+    align-items: @align-items;
+    align-content: @align-content;
+}
+.button(@bg-color, @font-color, @width) {
+    background: @bg-color;
+    color: @font-color;
+    width: @width;
+    height: 3.5rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    .flexbox(row, center, center, center);
+    @keyframes button-animation {
+        from {background-color: @bg-color; color: @font-color;}
+        to {background: @font-color; color: @bg-color; border: 1px solid @bg-color;}
+    }
+    &:hover {
+        animation-name: button-animation;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
 }
