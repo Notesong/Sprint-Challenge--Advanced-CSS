@@ -173,17 +173,24 @@ nav a {
   align-items: center;
   align-content: center;
   width: 100%;
+  position: fixed;
+  top: 0;
+  background: #22283A;
 }
 #main-nav h1 {
   margin-top: 2rem;
+  color: #F6F6F6;
 }
 #main-nav nav {
   padding: 2rem;
 }
 #main-nav nav a {
   text-decoration: none;
-  color: #454A59;
+  color: #8b8f99;
   margin: 0 1.4rem;
+}
+#main-nav nav a:hover {
+  color: #F6F6F6;
 }
 footer {
   color: #22283B;
@@ -194,6 +201,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home .intro {
+  margin-top: 15rem;
 }
 .home .intro img {
   width: 100%;
