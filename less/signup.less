@@ -1,46 +1,49 @@
 #signup-section {
-    .subscribe-title {
-        margin-top: 14rem;
-        margin-bottom: 3rem;
+    margin-top: 15rem;
+
+    h2, p {
         text-align: center;
+        margin: 3rem;
     }
-    .signup-form {
-        display: flex;
-        justify-content: center;
-
-        form {
-            display: flex;
-            flex-flow: column;
-            width: 100%;
-            
-            label {
-                margin-top: 2rem;
-                font-size: 1.6rem;
-            }
-
-            #firstname, #lastname, #email {
-                width: 20rem;
-                margin: 15px 0 5px 0;
-            }
-            #address1, #address2 {
-                width: 20rem;
-                margin: 15px 0 5px 0;
-            }
-            #city {
-                width: 20rem;
-                margin: 15px 0 5px 0;
-            }
-            #state {
-                width: 20rem;
-                margin: 15px 0 5px 0;
-            }
-            #zipcode {
-                width: 20rem;
-                margin: 15px 0 5px 0;
-            }
-            .for-submit-button {
-                .button(@button-background, @wild-sand, 11rem, 100%);
-            }
+    label, input, select {
+        font-size: 1.7rem;
+    }
+    #name-section, #street-section, #city-state-zip {
+        .flexbox(row, flex-start, center, center);
+    }
+    .form-section {
+            .flexbox(column, center, flex-start, center);
+            margin: 1rem 4rem;
+        }
+    #street-section {
+        input {
+            width: 30rem;
         }
     }
+    #zip-section {
+        input {
+            width: 10rem;
+        }
+    }
+    #email-section {
+        input {
+            width: 30rem;
+        }
+    }
+
+    #form-buttons {
+        .flexbox(row, center, center, center);
+
+        button {
+            .form-button(@button-background, @wild-sand, 11rem, 100%);  
+            margin: 3rem;  
+        }          
+    }
+}
+#signup-footer {
+    position: fixed;
+    bottom: 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }

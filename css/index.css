@@ -351,93 +351,82 @@ footer {
   height: auto;
   border-radius: 10px;
 }
-#signup-section .subscribe-title {
-  margin-top: 14rem;
-  margin-bottom: 3rem;
+#signup-section {
+  margin-top: 15rem;
+}
+#signup-section h2,
+#signup-section p {
   text-align: center;
+  margin: 3rem;
 }
-#signup-section .signup-form {
+#signup-section label,
+#signup-section input,
+#signup-section select {
+  font-size: 1.7rem;
+}
+#signup-section #name-section,
+#signup-section #street-section,
+#signup-section #city-state-zip {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+#signup-section .form-section {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  margin: 1rem 4rem;
 }
-#signup-section .signup-form form {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
+#signup-section #street-section input {
+  width: 30rem;
 }
-#signup-section .signup-form form label {
-  margin-top: 2rem;
-  font-size: 1.6rem;
+#signup-section #zip-section input {
+  width: 10rem;
 }
-#signup-section .signup-form form #firstname,
-#signup-section .signup-form form #lastname,
-#signup-section .signup-form form #email {
-  width: 20rem;
-  margin: 15px 0 5px 0;
+#signup-section #email-section input {
+  width: 30rem;
 }
-#signup-section .signup-form form #address1,
-#signup-section .signup-form form #address2 {
-  width: 20rem;
-  margin: 15px 0 5px 0;
-}
-#signup-section .signup-form form #city {
-  width: 20rem;
-  margin: 15px 0 5px 0;
-}
-#signup-section .signup-form form #state {
-  width: 20rem;
-  margin: 15px 0 5px 0;
-}
-#signup-section .signup-form form #zipcode {
-  width: 20rem;
-  margin: 15px 0 5px 0;
-}
-#signup-section .signup-form form .for-submit-button {
-  background: #22283A;
-  width: 11rem;
-  height: 3.5rem;
-  font-size: 2rem;
-  border-radius: 0.5rem;
+#signup-section #form-buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-@media only screen and (max-width: 500px) {
-  #signup-section .signup-form form .for-submit-button {
-    width: 100%;
-    height: 7rem;
-  }
-}
-#signup-section .signup-form form .for-submit-button a {
+#signup-section #form-buttons button {
+  background: #22283A;
+  width: 11rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  border: none;
   color: #F6F6F6;
-  text-decoration: none;
+  margin: 3rem;
 }
-@keyframes button-a-animation {
+@keyframes button-b-animation {
   from {
+    background-color: #22283A;
     color: #F6F6F6;
   }
   to {
-    color: #22283A;
-  }
-}
-#signup-section .signup-form form .for-submit-button a:hover {
-  animation-name: button-a-animation;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-@keyframes button-animation {
-  from {
-    background-color: #22283A;
-  }
-  to {
     background: #F6F6F6;
+    color: #22283A;
     border: 1px solid #22283A;
   }
 }
-#signup-section .signup-form form .for-submit-button:hover {
-  animation-name: button-animation;
+#signup-section #form-buttons button:hover {
+  animation-name: button-b-animation;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
+}
+#signup-footer {
+  position: fixed;
+  bottom: 0;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }

@@ -11,20 +11,22 @@
     align-items: @align-items;
     align-content: @align-content;
 }
-.and-hover(@animation) {
+.and-hover-animation-settings(@animation) {
     &:hover {
         animation-name: @animation;
         animation-duration: 0.8s;
         animation-fill-mode: forwards;
     }
 }
-.button(@bg-color, @font-color, @width, @phone-width) {
+.basic-button-settings(@bg-color, @width) {
     background: @bg-color;
-    
     width: @width;
     height: 3.5rem;
     font-size: 2rem;
     border-radius: 0.5rem;
+}
+.button(@bg-color, @font-color, @width, @phone-width) {
+    .basic-button-settings(@bg-color, @width);
     .flexbox(row, center, center, center);
     @media @phone {
         width: @phone-width;
@@ -38,12 +40,22 @@
             from {color: @font-color;}
             to {color: @bg-color;}
         }
-        .and-hover(button-a-animation);
+        .and-hover-animation-settings(button-a-animation);
     }
 
     @keyframes button-animation {
         from {background-color: @bg-color;}
         to {background: @font-color; border: 1px solid @bg-color;}
     }
-    .and-hover(button-animation);
+    .and-hover-animation-settings(button-animation);
+}
+.form-button(@bg-color, @font-color, @width, @phone-width) {
+    .basic-button-settings(@bg-color, @width);
+    border: none;
+    color: @font-color;
+    @keyframes button-b-animation {
+        from {background-color: @bg-color; color: @font-color}
+        to {background: @font-color; color: @bg-color; border: 1px solid @bg-color;}
+    }
+    .and-hover-animation-settings(button-b-animation);
 }
