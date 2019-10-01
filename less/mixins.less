@@ -1,1 +1,49 @@
 // Mixins Here
+.phone-width-100() {
+    @media @phone {
+        width: 100%;
+    }
+}
+.flexbox(@direction, @justfify, @align-items, @align-content) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justfify;
+    align-items: @align-items;
+    align-content: @align-content;
+}
+.and-hover(@animation) {
+    &:hover {
+        animation-name: @animation;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+}
+.button(@bg-color, @font-color, @width, @phone-width) {
+    background: @bg-color;
+    
+    width: @width;
+    height: 3.5rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    .flexbox(row, center, center, center);
+    @media @phone {
+        width: @phone-width;
+        height: 7rem;
+    }
+
+    a {
+        color: @font-color;
+        text-decoration: none;
+        @keyframes button-a-animation {
+            from {color: @font-color;}
+            to {color: @bg-color;}
+        }
+        .and-hover(button-a-animation);
+    }
+
+    @keyframes button-animation {
+        from {background-color: @bg-color;}
+        to {background: @font-color; border: 1px solid @bg-color;}
+    }
+    .and-hover(button-animation);
+}

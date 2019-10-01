@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website responds to window size but doesn't use media queries to change the format.  A fully responsive website does use media queries to adjust how the website is displayed depending on screen size and/or type of device.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+When doing mobile first, you're first designing the website with a mobile view in mind before designing the other versions. Each version adapts for a different size until it's typically a desktop version of the website.  Desktop first is the exact opposite of mobile first.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+Setting the font-size to 62.5% sets the pixels for the font to exactly 10px if the viewer is currently on the medium font size setting (browsers will typically default to this size).  This makes it easier to set fonts sizes because you're working with 10's instead of 16's since the medium font setting is generally 16px. 
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing extends the functionality of CSS to include functions, variables, and mixins.  It also allows for nesting the code which promotes structure that makes the code easier to read and understand.  The code can be written in a preprocessing language, like SASS or LESS, and then can be converted into standard CSS using the complier so that browsers can understand it.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concepts are mixins and nesting.  It's hard to choose a favorite!  Mixins are great for producing DRY code.  And nesting makes everything easier to understand since it structures everything so well if written properly.  The concept that gave me the most trouble was probably the nesting because there are no set rules on structure.  It's a learning process to figure out how to best nest everything.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
